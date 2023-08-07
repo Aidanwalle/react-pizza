@@ -20,7 +20,7 @@ function Categories() {
     <div className="categories">
       <ul>
         {categories.map((value, index) => (
-          <li
+          <li key={index}
             onClick={() => setButtonActive(index)}
             className={active === index ? "active" : ""}
           >
