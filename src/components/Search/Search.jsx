@@ -1,10 +1,15 @@
 import React from "react";
 
-import style from "./Search.module.scss";
+import { SearchContext } from "../../App";
+
 import searchLogo from "../../assets/search.png";
 import clearSearch from "../../assets/clear.png";
 
-const Search = ({ searchValue, setSearchValue }) => {
+import style from "./Search.module.scss";
+
+const Search = () => {
+  const { searchValue, setSearchValue } = React.useContext(SearchContext);
+
   return (
     <div className={style.searchBlock}>
       <input
